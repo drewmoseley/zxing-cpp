@@ -4,15 +4,15 @@ project (ZXing VERSION "1.2.0" LANGUAGES CXX)
 
 option (BUILD_WRITERS "Build with writer support (encoders)" ON)
 option (BUILD_READERS "Build with reader support (decoders)" ON)
-option (BUILD_EXAMPLES "Build the example barcode reader/writer applicatons" ON)
-option (BUILD_BLACKBOX_TESTS "Build the black box reader/writer tests" ON)
+option (BUILD_EXAMPLES "Build the example barcode reader/writer applicatons" OFF)
+option (BUILD_BLACKBOX_TESTS "Build the black box reader/writer tests" OFF)
 option (BUILD_UNIT_TESTS "Build the unit tests (don't enable for production builds)" OFF)
 option (BUILD_PYTHON_MODULE "Build the python module" OFF)
 
 if (WIN32)
     option (BUILD_SHARED_LIBS "Build and link as shared library" OFF)
 else()
-    option (BUILD_SHARED_LIBS "Build and link as shared library" ON)
+    option (BUILD_SHARED_LIBS "Build and link as shared library" OFF)
 endif()
 
 if (MSVC)
